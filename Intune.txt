@@ -1,0 +1,17 @@
+Name: 						Change language during Autopilot
+Publisher: 					CmdCtrl4U
+
+Install command: 			ServiceUI_x64.exe -Process:explorer.exe Invoke-AppDeployToolkit.exe -DeploymentType "Install"
+Uninstall command: 			ServiceUI_x64.exe -Process:explorer.exe Invoke-AppDeployToolkit.exe -DeploymentType "Uninstall"
+
+Allow available uninstall: 	No
+Install behavior:			System
+
+Detection rules (Registry)
+		
+		Rule type: 			Registry
+		Path:				HKLM\SOFTWARE\WOW6432Node\CmdCtrl4U\ComputerManagement\Autopilot\
+		Value name:			ChangeLanguageDuringAutopilot
+		Detection method:	String comparison
+		Operator:			Equals
+		Value:				v1
